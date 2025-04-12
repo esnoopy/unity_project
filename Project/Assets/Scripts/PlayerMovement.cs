@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;  //velocity of the fall
  
     bool isGrounded;  //if grounded or not
+
+    public float rotationSpeed;
+    public float rotatePlayer = 0.3f;
  
     // Update is called once per frame
     void Update()
@@ -41,9 +44,22 @@ public class PlayerMovement : MonoBehaviour
  
         controller.Move(move * speed * Time.deltaTime);  //move method supplies the movement of a game object with an attached character controller component
 
+//https://stackoverflow.com/questions/74551523/unity-3d-instantly-rotate-in-the-direction-of-movement
+        /*if (move.magnitude > 0.1f){
+            Quaternion targetRotation = Quaternion.LookRotation (move);
+            Quaternion targetRotationY = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0);
+            transform.rotation = Quaternion.Slerp (transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+        }*/
+
+//https://discussions.unity.com/t/noob-question-saving-a-vector-of-the-players-facing-direction/842769/2
+        /*if (move.magnitude > 0.01f){
+            lastDir = move.Normalize;
+        }*/
+
+
 //https://www.reddit.com/r/Unity3D/comments/ouu56x/no_diagonal_movment_input/?rdt=41043
-        if(Input.GetKey("up") && Input.GetKey("right")){
-            Vector3 moveDiagonal = Vector3.Normalize(new Vector3(x, 0f, z));
+        if(Input.GetKey("up") && Input.GetKey("right") || Input.GetKey("up") && Input.GetKey("left")){
+            //Vector3 moveDiagonal = Vector3.Normalize(new Vector3(x, 0f, z));
         }
 
         //check if the player is on the ground so he can jump
