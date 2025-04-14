@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 97daa296c21b99f438c611b89e3dcaec
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234361
+  packageName: AnyRPG Core
+  packageVersion: 0.16
+  assetPath: Assets/AnyRPG/Core/System/Animation/TimelineSignals/BeginAbility.signal
+  uploadId: 600858
