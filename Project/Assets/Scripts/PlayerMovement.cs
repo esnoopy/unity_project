@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;  //velocity of the fall
  
     bool isGrounded;  //if grounded or not
+
+    
  
     // Update is called once per frame
     void Update()
@@ -35,10 +37,10 @@ public class PlayerMovement : MonoBehaviour
  
         float x = Input.GetAxis("Horizontal");  //checks if it is -1 or 1
         float z = Input.GetAxis("Vertical");  //checks if it is -1 or 1 (forward or backward)
- 
+
         //right is the red Axis, foward is the blue axis
         Vector3 move = transform.right * x + transform.forward * z;  //checks direction of x axis by multiple with the red axis and direction of z axis multiply by blue axis
- 
+       
         controller.Move(move * speed * Time.deltaTime);  //move method supplies the movement of a game object with an attached character controller component
 
 //https://www.reddit.com/r/Unity3D/comments/ouu56x/no_diagonal_movment_input/?rdt=41043
