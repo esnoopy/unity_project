@@ -14,6 +14,7 @@ public class ShowInfo : MonoBehaviour
         infoPanel.SetActive(false);
         Debug.Log("SET FALSE");
         infomanager = FindFirstObjectByType<InfoDialogueManager>();
+        infoinfo = GetComponent<InfoDialogue>();
 
         if (infomanager == null)
         {
