@@ -9,7 +9,7 @@ public class PausedMenuScript : MonoBehaviour
 
     void Update(){
 
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.M)){
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             if(GamePaused){
