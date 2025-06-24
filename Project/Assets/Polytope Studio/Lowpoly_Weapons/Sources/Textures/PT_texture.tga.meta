@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44f1d34e4ffdb7a47805196df57f4a65
+guid: e90fb7d13c3c6234a8d6eacd46f0bb85
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -88,8 +88,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 199890
-  packageName: Lowpoly Modular Armors - Free - MEDIEVAL FANTASY SERIES
-  packageVersion: 1.2.1
+  productId: 176809
+  packageName: Lowpoly Medieval Plague Doctor - Free Pack
+  packageVersion: 1.0
   assetPath: Assets/Polytope Studio/Lowpoly_Weapons/Sources/Textures/PT_texture.tga
-  uploadId: 721310
+  uploadId: 575737

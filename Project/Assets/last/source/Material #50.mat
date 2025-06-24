@@ -101,7 +101,7 @@ Material:
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
-    - _BASE_COLOR_WEIGHT: 1
+    - _BASE_COLOR_WEIGHT: 0.43
     - _BUMP_MAP_STRENGTH: 0.3
     - _Blend: 0
     - _BlendMode: 0
