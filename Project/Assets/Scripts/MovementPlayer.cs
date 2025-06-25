@@ -43,21 +43,29 @@ public class MovementPlayer : MonoBehaviour
         Movement();
     }
 
-    private void MouseLook(){
+    private void MouseLook()
+    {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime; //deltaTime to be consistent, not to get different inputs depending on different frame rates
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
- 
+
         //control rotation around x axis (Look up and down)
         xRotation -= mouseY;  //up negative down positive
- 
+
         //we clamp the rotation so we cant Over-rotate (like in real life)
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);  //can look 90 degrees up and down cant look backwards
- 
+
         //control rotation around y axis (Look left and right)
         yRotation += mouseX;
- 
-       //applying both rotations
-       transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);  //rotation of the transform relative to the transform rotation of the parent
+
+        //applying both rotations
+        //transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);  //rotation of the transform relative to the transform rotation of the parent
+
+        // Apply horizontal rotation to the player's body (transform)
+        transform.localRotation = Quaternion.Euler(0f, yRotation, 0f); // Only Y rotation for the player body
+    
+        // Apply vertical rotation to the camera
+        camera.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // Only X rotation for the camera
+
     }
 
     private void Movement(){
