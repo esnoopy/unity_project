@@ -9,6 +9,7 @@ public class HoverUI : MonoBehaviour
     public GameObject book;
     public GameObject closeBtn;
     //public MonoBehaviour mouseLookScript;
+    public GameObject map;
 
     void Update()
     {
@@ -57,11 +58,21 @@ public class HoverUI : MonoBehaviour
     public void bookOpen()
     {
         book.SetActive(true);
-    } 
-    
+    }
+
     public void bookClose()
     {
         book.SetActive(false);
     } 
+    
+    public void mapOpen()
+    {
+        map.SetActive(true);
+    } 
+    
+    public void mapClose()
+    {
+        map.SetActive(false);
+    }
     
 }
