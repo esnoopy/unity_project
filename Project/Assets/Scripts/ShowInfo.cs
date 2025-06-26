@@ -24,6 +24,7 @@ public class ShowInfo : MonoBehaviour
 
     void OnTriggerEnter(Collider thing)
     {
+        Debug.Log("Triggered by: " + thing.name);
         if (thing.tag == "Player")
         {
             Debug.Log("Player inside");
@@ -31,12 +32,12 @@ public class ShowInfo : MonoBehaviour
             Debug.Log("SET True");
             if (infoinfo != null)
             {
-                Debug.Log("InfoInfo not set.");   
+                Debug.Log("InfoInfo not set.");
             }
             if (infomanager != null && infoinfo != null)
             {
                 infomanager.StartInfoDialogue(infoinfo);
-                Debug.Log("InfoInfo not set."+infoinfo); 
+                Debug.Log("InfoInfo not set." + infoinfo);
             }
         }
     }
