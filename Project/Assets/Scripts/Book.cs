@@ -1,3 +1,52 @@
+/*
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+public class Book : MonoBehaviour
+{
+    [SerializeField] float pageSpeed = 0.5f;
+    [SerializeField] List<Transform> pages;
+    int index = -1;
+
+    public void RotateForward()
+    {
+        index++;
+        float angle = 180; //in order to rotate the page forward, you need to set the rotation by 180 degrees around the y axis
+        StartCoroutine(Rotate(angle, true));
+    }
+
+    public void RotateBack()
+    {
+        float angle = 0; //in order to rotate the page back, you need to set the rotation to 0 degrees around the y axis
+        StartCoroutine(Rotate(angle, false));
+    }
+
+    IEnumerator Rotate(float angle, bool forward)
+    {
+        float value = 0f;
+        while (true)
+        {
+            Quaternion targetRotation = Quaternion.Euler(0, angle, 0);
+            value += Time.deltaTime * pageSpeed;
+            pages[index].rotation = Quaternion.Slerp(pages[index].rotation, targetRotation, value); //smoothly turn the page
+            float angle1 = Quaternion.Angle(pages[index].rotation, targetRotation); //calculate the angle between the given angle of rotation and the current angle of rotation
+            if (angle1 < 0.1f)
+            {
+                if (forward == false)
+                {
+                    index--;
+                }
+                break;
+            }
+            yield return null;
+        }
+    }
+}
+*/
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
