@@ -6567,7 +6567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120192957}
   m_Layer: 5
-  m_Name: page1
+  m_Name: sheet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8436,7 +8436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164844120}
   m_Layer: 5
-  m_Name: page2
+  m_Name: sheet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8449,7 +8449,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164844119}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10838,7 +10838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228493835}
   m_Layer: 5
-  m_Name: pages
+  m_Name: sheets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21752,7 +21752,7 @@ GameObject:
   - component: {fileID: 481088262}
   - component: {fileID: 481088261}
   m_Layer: 5
-  m_Name: card1
+  m_Name: image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21765,7 +21765,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481088259}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -24479,8 +24479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookBtn: {fileID: 20207650}
-  book: {fileID: 0}
-  closeBtn: {fileID: 0}
+  book: {fileID: 1580357470}
+  closeBtn: {fileID: 467901838}
   map: {fileID: 305373214}
 --- !u!114 &525160879
 MonoBehaviour:
@@ -24497,6 +24497,8 @@ MonoBehaviour:
   pageSpeed: 0.5
   pages:
   - {fileID: 120192957}
+  - {fileID: 164844120}
+  - {fileID: 0}
   - {fileID: 0}
   backButton: {fileID: 1798351685}
   forwardButton: {fileID: 1175824074}
@@ -29197,7 +29199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 644853174}
   m_Layer: 5
-  m_Name: side1
+  m_Name: frontSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40969,7 +40971,7 @@ GameObject:
   - component: {fileID: 890848187}
   - component: {fileID: 890848186}
   m_Layer: 5
-  m_Name: pageSprite
+  m_Name: pageBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50805,7 +50807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1144981806}
   m_Layer: 5
-  m_Name: side2
+  m_Name: backSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52208,7 +52210,7 @@ GameObject:
   - component: {fileID: 1179879529}
   - component: {fileID: 1179879528}
   m_Layer: 5
-  m_Name: card1
+  m_Name: image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56671,7 +56673,7 @@ GameObject:
   - component: {fileID: 1289480162}
   - component: {fileID: 1289480161}
   m_Layer: 5
-  m_Name: card1
+  m_Name: image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56693,7 +56695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 467, y: 146}
+  m_AnchoredPosition: {x: 467, y: -105}
   m_SizeDelta: {x: 85.693, y: 85.974}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289480161
@@ -63648,7 +63650,7 @@ GameObject:
   - component: {fileID: 1431340498}
   - component: {fileID: 1431340497}
   m_Layer: 5
-  m_Name: pageSprite
+  m_Name: pageBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70001,7 +70003,7 @@ GameObject:
   - component: {fileID: 1577106344}
   - component: {fileID: 1577106343}
   m_Layer: 5
-  m_Name: card1
+  m_Name: image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70227,7 +70229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579404529}
   m_Layer: 5
-  m_Name: side1
+  m_Name: frontSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70268,7 +70270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1580357471
 RectTransform:
   m_ObjectHideFlags: 0
@@ -86288,7 +86290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1980880320}
   m_Layer: 5
-  m_Name: side2
+  m_Name: backSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
