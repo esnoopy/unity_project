@@ -9,5 +9,7 @@ public class ShopUI : ScriptableObject
 {
     public string itemName;
     public Sprite icon;
-    public Sprite price;
+    public Sprite priceIcon;
+
+    public int price;
 }
