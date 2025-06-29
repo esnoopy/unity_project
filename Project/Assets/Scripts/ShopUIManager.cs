@@ -24,30 +24,71 @@ public class ShopUIManager : MonoBehaviour
         public Sprite Icon;
         public Sprite MoneyIcon;
 
-        public string Money;
+        public int Money;
     }
 
-    [SerializeField] Shop[] allShops;
-    void Start()
+    [SerializeField] public GameObject shopButtonPrefab;
+    [SerializeField] public Transform contentParent; 
+    private Shop[] allShops;
+    //[SerializeField] Shop[] allShops;
+
+    void Awake() 
     {
-       GameObject buttonTemplate = transform.GetChild(0).gameObject;
-        GameObject g;
+        if (contentParent == null)
+        {
+            contentParent = transform; 
+        }
+        if (shopButtonPrefab == null && contentParent.childCount > 0)
+        {
+            shopButtonPrefab = contentParent.GetChild(0).gameObject;
+        }
+        else if (shopButtonPrefab == null)
+        {
+            Debug.LogError("ShopButton prefab is not assigned and could not be found as the first child of the Content object. Please assign it in the Inspector or ensure it's the first child.");
+        }
+    }
+    public void DisplayShopItems(Shop[] itemsToDisplay)
+    {
+
+        ClearShopItems();
+        allShops = itemsToDisplay;
+        //GameObject buttonTemplate = transform.GetChild(0).gameObject;
+        //GameObject g;
+        if (shopButtonPrefab == null)
+        {
+            Debug.LogError("ShopButton prefab is not set. Cannot display shop items.");
+            return;
+        }
 
         int N = allShops.Length;
         for (int i = 0; i < N; i++)
         {
-            g = Instantiate(buttonTemplate, transform);
+            //g = Instantiate(buttonTemplate, transform);
+            GameObject g = Instantiate(shopButtonPrefab, contentParent);
             g.SetActive(true);
             g.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = allShops[i].Name;
             g.transform.Find("ItemIcon").GetComponent<Image>().sprite = allShops[i].Icon;
-            g.transform.Find("Money").GetComponent<TextMeshProUGUI>().text = allShops[i].Money;
+            g.transform.Find("Money").GetComponent<TextMeshProUGUI>().text = allShops[i].Money.ToString();
             g.transform.Find("MoneyIcon").GetComponent<Image>().sprite = allShops[i].MoneyIcon;
 
             g.GetComponent<Button>().AddEventListener(i, ItemClicked);
 
         }
         
-        Destroy(buttonTemplate);
+        //Destroy(buttonTemplate);
+    }
+
+    public void ClearShopItems()
+    {
+        // Destroy all existing shop buttons
+        foreach (Transform child in contentParent)
+        {
+            if (child.gameObject != shopButtonPrefab) 
+            {
+                Destroy(child.gameObject);
+            }
+        }
+        allShops = null;
     }
 
     void ItemClicked(int itemIndex)
