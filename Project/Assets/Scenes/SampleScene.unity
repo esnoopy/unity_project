@@ -1408,15 +1408,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 14216303df2e78e47be6bcf68a9a7db5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2773,6 +2773,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (8)
@@ -7413,7 +7433,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146077553}
   m_HandleRect: {fileID: 2146077552}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -9843,23 +9863,23 @@ MonoBehaviour:
   shopAItems:
   - Name: Corn
     Icon: {fileID: 21300000, guid: cfafc01391b9455418d0bf7730183f53, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Pumpkin
     Icon: {fileID: 21300000, guid: b3eb377107d4fca4f8556134af3acae4, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Bananas
     Icon: {fileID: 21300000, guid: b7d3c90b7eb78c747abe887d28a2d90a, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Red pepper
     Icon: {fileID: 21300000, guid: 4dc733fb7da740f419306148785fa1b5, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Watermelon
     Icon: {fileID: 21300000, guid: 759da7a789dd3f04abe596b7cc28a5c5, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
 --- !u!1001 &196963143
 PrefabInstance:
@@ -9970,27 +9990,27 @@ MonoBehaviour:
   shopAItems:
   - Name: Pot
     Icon: {fileID: 21300000, guid: 717c02ed0fcded048914a16b2e2b1cc5, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 5
   - Name: Blue Orchid
     Icon: {fileID: 21300000, guid: 18da5e26ccb371e4d9e29726b63aea7e, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 5
   - Name: Pink Orchid
     Icon: {fileID: 21300000, guid: a8df879ad44e8914981167641633f26b, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 5
   - Name: Red Coleus
     Icon: {fileID: 21300000, guid: 35b97645a5b699443bfe47ac64f70bbf, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 5
   - Name: Yellow Coleus
     Icon: {fileID: 21300000, guid: c19ab0b51c0ca3f4ab07cda15b427faf, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 5
   - Name: Cactus
     Icon: {fileID: 21300000, guid: e0545a11f7c79cd458a0df341d80de29, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 5
 --- !u!1001 &199404803
 PrefabInstance:
@@ -12601,14 +12621,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a9aaecbe44b5da744a38cd871fb43d7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15884,11 +15904,11 @@ MonoBehaviour:
   shopAItems:
   - Name: Herning
     Icon: {fileID: 21300000, guid: 7f13fd261529dde4db5897fab61e6b40, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 6
   - Name: Mackerel
     Icon: {fileID: 21300000, guid: 6ab3b3f2ce4905b45b8e63fed1ac6d77, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 6
 --- !u!1 &328150642
 GameObject:
@@ -16670,6 +16690,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (9)
@@ -19775,6 +19815,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (13)
@@ -21126,6 +21186,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (17)
@@ -21292,6 +21372,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (15)
@@ -23247,6 +23347,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (11)
@@ -23825,6 +23945,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (16)
@@ -28851,6 +28991,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (1)
@@ -31909,55 +32069,55 @@ MonoBehaviour:
   shopAItems:
   - Name: Apple
     Icon: {fileID: 21300000, guid: 62827f2ed65882240a4b4492826f309e, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Bananas
     Icon: {fileID: 21300000, guid: 538220895038a7641b00b05c7ad751ab, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Beetroot
     Icon: {fileID: 21300000, guid: 119751540b24be44dae88edbf5112eec, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Carrots
     Icon: {fileID: 21300000, guid: 4db72a092b7c1b0448092fb22511a423, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Cucumber
     Icon: {fileID: 21300000, guid: b587933877c864d438f0abdce092eb59, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Tomato
     Icon: {fileID: 21300000, guid: 0ec1932940b1c5b48a50f069b3488c55, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Orange
     Icon: {fileID: 21300000, guid: 18b36a479c143e14bace242ef2b134d9, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Potato
     Icon: {fileID: 21300000, guid: f07353b6a2af87e479654347ec48b793, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Pumpkin
     Icon: {fileID: 21300000, guid: 7ce5a3c69cd09084ba08e7a37fe0f66d, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 3
   - Name: Red Pepper
     Icon: {fileID: 21300000, guid: 8a071a03f19516e4dabdf35186062bd9, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Bread
     Icon: {fileID: 21300000, guid: ffe74eb98f8761b489fd32d377e16528, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Watermelon
     Icon: {fileID: 21300000, guid: e41c41a30bed85640b32546f855d0afd, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Eggplant
     Icon: {fileID: 21300000, guid: 47025b88a487f004e8fffc85b4a82bf3, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
 --- !u!1001 &710657968
 PrefabInstance:
@@ -33131,15 +33291,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 047b929beb10565479851d39b452dfb6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -38913,6 +39073,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (5)
@@ -41631,6 +41811,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (3)
@@ -45709,6 +45909,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (12)
@@ -49349,19 +49569,19 @@ MonoBehaviour:
   shopAItems:
   - Name: Ham
     Icon: {fileID: 21300000, guid: ed15887e70908934fa8cb8aec848bf07, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 5
   - Name: Pork Steak
     Icon: {fileID: 21300000, guid: cb33a5d5d887d1d4e8a761205fec1d63, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 5
   - Name: Sauges
     Icon: {fileID: 21300000, guid: 8b2efcd81879bf242bf76ca2a45f1bda, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 4
   - Name: Slice of Cheese
     Icon: {fileID: 21300000, guid: b782d0cd00f3d404bb544136d9456ed0, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 3
 --- !u!1001 &1071083847
 PrefabInstance:
@@ -50607,6 +50827,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (7)
@@ -50731,7 +50971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.0005493164, y: 409.49988}
+  m_AnchoredPosition: {x: 0.0005493164, y: 409.5}
   m_SizeDelta: {x: -7.248291, y: 10}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1098569727
@@ -53211,6 +53451,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (6)
@@ -57059,6 +57319,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (10)
@@ -61518,8 +61798,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4286291893
+  m_fontColor: {r: 0.70980394, g: 0.62352943, b: 0.48235297, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -62089,7 +62369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.6, y: -326}
+  m_AnchoredPosition: {x: -309, y: -356}
   m_SizeDelta: {x: 255.205, y: 88.803}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349054479
@@ -62156,8 +62436,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2be7b70e984b51444aca9c12ae4723a7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -70913,6 +71193,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (2)
@@ -72853,6 +73153,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (14)
@@ -76344,19 +76664,19 @@ MonoBehaviour:
   shopAItems:
   - Name: Bread
     Icon: {fileID: 21300000, guid: f278e77372ecc874e9a5c58014752815, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Patato
     Icon: {fileID: 21300000, guid: b62f8a8271efe36469079637464c52db, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Carrot
     Icon: {fileID: 21300000, guid: aa663ff461f8a2749aed0674d0cfbdf6, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Beetroot
     Icon: {fileID: 21300000, guid: 00be573ae3afec942b09eb1a04ddf742, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
 --- !u!65 &1661430974
 BoxCollider:
@@ -80024,27 +80344,27 @@ MonoBehaviour:
   shopAItems:
   - Name: Biscuit
     Icon: {fileID: 21300000, guid: 7a9a27bbe9d225f4ebe7828b1dd829bf, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Egg
     Icon: {fileID: 21300000, guid: a41799c5018e9eb4e91ded41db8d4ab5, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Pie
     Icon: {fileID: 21300000, guid: 01b34538677349d468ad71cf9d589365, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 4
   - Name: Pretzel
     Icon: {fileID: 21300000, guid: 0efd1d4e272d78448b00c6cd062d2198, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 3
   - Name: Cake
     Icon: {fileID: 21300000, guid: d81d0357a7f70e04c9eed60478fe0a1d, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 4
   - Name: Muffin
     Icon: {fileID: 21300000, guid: a9776164508999d4e82b7c7efe5937f7, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
 --- !u!1001 &1768170715
 PrefabInstance:
@@ -87147,27 +87467,27 @@ MonoBehaviour:
   shopAItems:
   - Name: Gravestone
     Icon: {fileID: 21300000, guid: 0d83b11ac64631b42b76cefb2c346495, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 5
   - Name: Lantern
     Icon: {fileID: 21300000, guid: 6bd1bfcd07599e34fb20681334e8ec37, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 3
   - Name: Lantern
     Icon: {fileID: 21300000, guid: 1454d6c8619a9c24da1bdc8f0e72461d, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 3
   - Name: Candles
     Icon: {fileID: 21300000, guid: 0b2f6cf8f8fdba24d801ae4192615df0, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: Candlesick
     Icon: {fileID: 21300000, guid: 980ac330d347f2b48ab7e36271ebbf8e, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 3
   - Name: Vase
     Icon: {fileID: 21300000, guid: 7e5b69c96c08fc54dac82a83e1b8d2a7, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 3
 --- !u!1 &1953180954 stripped
 GameObject:
@@ -87213,7 +87533,7 @@ MonoBehaviour:
   shopAItems:
   - Name: Cup of Bear
     Icon: {fileID: 21300000, guid: 095b0c113ebc8214f934e016b6efa584, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
 --- !u!1001 &1953365985
 PrefabInstance:
@@ -87557,8 +87877,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287803326
+  m_fontColor: {r: 0.7433963, g: 0.68486136, b: 0.57087225, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -87635,6 +87955,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot (4)
@@ -91519,35 +91859,35 @@ MonoBehaviour:
   shopAItems:
   - Name: Book
     Icon: {fileID: 21300000, guid: 7e7b30ff64cbff34aa36e8fe31aedc79, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Ink
     Icon: {fileID: 21300000, guid: 7e7e99e8866ec0e418cdf10ee1be94b0, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 1
   - Name: ' Position of Strength'
     Icon: {fileID: 21300000, guid: f6cd4b3477db26e41ad16109aaa006cf, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Position of Sweetness
     Icon: {fileID: 21300000, guid: d275c4e91d9274944a2d6d692d3d09e5, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Hourglass
     Icon: {fileID: 21300000, guid: ccbe75d3013e20c4586a1437503f9e24, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Scale
     Icon: {fileID: 21300000, guid: ced9641b2b684c244bca938b2bb1906f, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 2
   - Name: Female Perfume
     Icon: {fileID: 21300000, guid: 07c98bde36c900f4ebb68a189d24a7f6, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 3
   - Name: Male Perfume
     Icon: {fileID: 21300000, guid: 4d37ca3e7fd333b4f8af9a090e19a7f2, type: 3}
-    MoneyIcon: {fileID: 0}
+    MoneyIcon: {fileID: 21300000, guid: 28518a6d5d2d6d74bae79e44ea89562a, type: 3}
     Money: 3
 --- !u!65 &2038266394
 BoxCollider:
@@ -96213,8 +96553,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0c79aaefa80e9984dbf128c300df4fc3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -96312,6 +96652,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1874365027968309858, guid: db73743e1a78ed04db2c9d9cd074dd49, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874365027968309858, guid: db73743e1a78ed04db2c9d9cd074dd49, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a9aaecbe44b5da744a38cd871fb43d7f, type: 3}
+    - target: {fileID: 1874365027968309858, guid: db73743e1a78ed04db2c9d9cd074dd49, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3694054
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874365027968309858, guid: db73743e1a78ed04db2c9d9cd074dd49, type: 3}
+      propertyPath: m_Color.g
+      value: 0.505313
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874365027968309858, guid: db73743e1a78ed04db2c9d9cd074dd49, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6377357
+      objectReference: {fileID: 0}
     - target: {fileID: 7555845620736569236, guid: db73743e1a78ed04db2c9d9cd074dd49, type: 3}
       propertyPath: m_Name
       value: ShopButton
@@ -96409,6 +96769,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 249479672}
     m_Modifications:
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c493956f212c784880d6f7e6bfb3d90, type: 3}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448452212215387744, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023231260201152677, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6119167772630232656, guid: 58987c3df543dfb49a7692e79aef5a5d, type: 3}
       propertyPath: m_Name
       value: InventorySlot
