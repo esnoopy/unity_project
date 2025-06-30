@@ -12746,6 +12746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 520629296}
   armorPrefab: {fileID: 100000, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  swordPrefab: {fileID: 100092, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  helmetPrefab: {fileID: 100060, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
 --- !u!4 &254766149
 Transform:
   m_ObjectHideFlags: 0
