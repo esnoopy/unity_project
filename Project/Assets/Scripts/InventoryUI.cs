@@ -1,59 +1,31 @@
-/*using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.UI;
-
-public class InventoryUI : MonoBehaviour {
-
-	public GameObject inventoryUI;	
-	public Transform itemsParent;	
-
-	Inventory inventory;	
-
-	void Start ()
-	{
-		inventory = Inventory.instance;
-		inventory.onItemChangedCallback += UpdateUI;
-	}
-
-	
-	void Update ()
-	{
-		if (Input.GetButtonDown("Inventory"))
-		{
-			inventoryUI.SetActive(!inventoryUI.activeSelf);
-			UpdateUI();
-		}
-	}
-
-	public void UpdateUI ()
-	{
-		InventorySlot[] slots = GetComponentsInChildren<InventorySlot>();
-
-		for (int i = 0; i < slots.Length; i++)
-		{
-			if (i < inventory.items.Count)
-			{
-				slots[i].AddItem(inventory.items[i]);
-			} else
-			{
-				slots[i].ClearSlot();
-			}
-		}
-	}
-
-}*/
-
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
-    public Transform itemsParent; 
-    public GameObject inventorySlotPrefab; 
-    public Image inventoryItemImage; 
+    public Transform itemsParent;
+    public GameObject inventorySlotPrefab;
 
-    InventorySlot[] slots; 
+    InventorySlot[] slots;
+    public TextMeshProUGUI playerMoneyText;
+    private int playerMoney = 0;
+
+    public Button refundButton;
+    private Item selectedItem = null;
+
+    public void AddMoney(int amount)
+    {
+        playerMoney += amount;
+        UpdateMoneyText();
+    }
+
+    private void UpdateMoneyText()
+    {
+        if (playerMoneyText != null)
+            playerMoneyText.text = "Money: " + playerMoney;
+    }
 
     void Start()
     {
@@ -68,16 +40,20 @@ public class InventoryUI : MonoBehaviour
         {
             Inventory.instance.onItemChangedCallback += UpdateInventoryUI;
         }
+        if (refundButton != null)
+            refundButton.onClick.AddListener(RefundSelectedItem);
+
+        Inventory.instance.onItemChangedCallback += UpdateInventoryUI;
     }
 
     public void AddItemToInventoryUI(Sprite itemSprite)
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            if (slots[i].itemImage.sprite == null) 
+            if (slots[i].itemImage.sprite == null)
             {
                 slots[i].itemImage.sprite = itemSprite;
-                slots[i].itemImage.enabled = true; 
+                slots[i].itemImage.enabled = true;
                 Debug.Log($"Added item sprite to inventory slot {i}");
                 return;
             }
@@ -115,4 +91,22 @@ public class InventoryUI : MonoBehaviour
             }
         }
     }
+    
+    public void SelectItem(Item item)
+    {
+        selectedItem = item;
+        Debug.Log("Selected item: " + item.name);
+    }
+
+    public void RefundSelectedItem()
+    {
+        if (selectedItem != null)
+        {
+            Inventory.instance.Remove(selectedItem);
+            AddMoney(selectedItem.moneyValue);
+            selectedItem = null;
+            UpdateInventoryUI(); // Make sure the UI reflects the updated inventory
+        }
+    }
+
 }
