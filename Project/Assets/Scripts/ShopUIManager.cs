@@ -115,12 +115,13 @@ public class ShopUIManager : MonoBehaviour
         newItem.moneyValue = clickedShopItem.Money;
         newItem.showInInventory = true;
         // Add it to the inventory
-        Inventory.instance.Add(newItem);
+        //Inventory.instance.Add(newItem);
 
         if (inventoryUI != null)
         {
 
-            inventoryUI.AddItemToInventoryUI(clickedShopItem.Icon);
+            inventoryUI.AddItemToInventoryUI(clickedShopItem.Icon, clickedShopItem.Money); 
+            Inventory.instance.Add(newItem); // Add it to the inventory
 
         }
         else

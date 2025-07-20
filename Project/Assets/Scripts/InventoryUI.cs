@@ -43,11 +43,26 @@ public class InventoryUI : MonoBehaviour
         if (refundButton != null)
             refundButton.onClick.AddListener(RefundSelectedItem);
 
+        // Initialize player money
+        playerMoney = 100; // Set initial money to 100
+        UpdateMoneyText(); // Display initial money
+
         Inventory.instance.onItemChangedCallback += UpdateInventoryUI;
     }
 
-    public void AddItemToInventoryUI(Sprite itemSprite)
+    public void AddItemToInventoryUI(Sprite itemSprite, int itemMoney)
     {
+
+        // Check if player has enough money
+        if (playerMoney < itemMoney)
+        {
+            Debug.Log("Not enough money to purchase this item!");
+            return; 
+        }
+
+        // Subtract money
+        AddMoney(-itemMoney); // Subtract the cost
+        
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].itemImage.sprite == null)
