@@ -1,7 +1,9 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovementPlayer : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] private float turningSpeed = 2f;
     [SerializeField] private float gravity = 9.81f;
     [SerializeField] private float jumpHeight = 2f;
+    private float currentYaw = 0f;
 
     private float verticalVelocity;
     private float speed;
@@ -32,10 +35,13 @@ public class MovementPlayer : MonoBehaviour
     [Header("Animation")]
     private Animator animator;
 
-    private void Start(){
+    private void Start()
+    {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     private void Update(){
         InputManagement();
@@ -44,29 +50,30 @@ public class MovementPlayer : MonoBehaviour
     }
 
     private void MouseLook()
+{
+    float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+    float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+    xRotation -= mouseY;
+    xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+    // Always apply vertical camera rotation
+    camera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+
+    // Check movement input
+    bool isMoving = Mathf.Abs(moveInput) > 0.1f || Mathf.Abs(turnInput) > 0.1f;
+
+    // Only apply horizontal rotation when moving
+    if (isMoving)
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime; //deltaTime to be consistent, not to get different inputs depending on different frame rates
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-        //control rotation around x axis (Look up and down)
-        xRotation -= mouseY;  //up negative down positive
-
-        //we clamp the rotation so we cant Over-rotate (like in real life)
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);  //can look 90 degrees up and down cant look backwards
-
-        //control rotation around y axis (Look left and right)
         yRotation += mouseX;
-
-        //applying both rotations
-        //transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);  //rotation of the transform relative to the transform rotation of the parent
-
-        // Apply horizontal rotation to the player's body (transform)
-        transform.localRotation = Quaternion.Euler(0f, yRotation, 0f); // Only Y rotation for the player body
-    
-        // Apply vertical rotation to the camera
-        camera.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // Only X rotation for the camera
-
+        currentYaw = yRotation;
     }
+
+    // Apply rotation to player body
+    transform.localRotation = Quaternion.Euler(0f, currentYaw, 0f);
+}
+
 
     private void Movement(){
         GroundMovement();
