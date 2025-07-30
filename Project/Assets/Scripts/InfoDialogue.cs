@@ -7,6 +7,5 @@ using UnityEngine;
 public class InfoDialogue : MonoBehaviour
 {
 
-    [TextArea(3,10)]
-    public string paragraph;
+    public Sprite image;
 }
