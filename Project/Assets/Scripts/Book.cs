@@ -62,9 +62,8 @@ public class Book : MonoBehaviour
     [SerializeField] GameObject backButton;
     [SerializeField] GameObject forwardButton;
     //public GameObject bookPanel;
-    [SerializeField] private List<TextMeshProUGUI> pageTexts; // one for each page
+    [SerializeField] private List<Image> pageImages; // one for each page
     private int currentSaveIndex = 0;
-
     private void Start()
     {
         //bookPanel.SetActive(false);
@@ -153,11 +152,12 @@ public class Book : MonoBehaviour
         }
     }
 
-    public void saveToBook(TextMeshProUGUI dialogue) {
+    public void saveToBook(Sprite imageToSave) {
 
-        if (currentSaveIndex < pageTexts.Count)
+        if (currentSaveIndex < pageImages.Count)
         {
-            pageTexts[currentSaveIndex].text = dialogue.text;
+            pageImages[currentSaveIndex].sprite = imageToSave;
+            pageImages[currentSaveIndex].enabled = true;
             currentSaveIndex++;
         }
         else
