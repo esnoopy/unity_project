@@ -6,21 +6,23 @@ using TMPro;
 
 public class InfoDialogueManager : MonoBehaviour
 {
-    public Image displayImage;  
+    public Image displayImage;
+     public Book bookScript;
 
-    public void StartInfoDialogue(InfoDialogue infoinfo){
-
-    if (infoinfo == null)
+    public void StartInfoDialogue(InfoDialogue infoinfo)
     {
-        Debug.LogError("infoinfo is NULL! Nothing was passed into StartInfoDialogue.");
-        return;
-    }
 
-    if (infoinfo.image == null)
-    {
-        Debug.LogWarning("infoinfo is NOT null, but image is null.");
-        return;
-    }
+        if (infoinfo == null)
+        {
+            Debug.LogError("infoinfo is NULL! Nothing was passed into StartInfoDialogue.");
+            return;
+        }
+
+        if (infoinfo.image == null)
+        {
+            Debug.LogWarning("infoinfo is NOT null, but image is null.");
+            return;
+        }
         if (infoinfo.image != null)  // Check if the sprite is assigned
         {
             displayImage.sprite = infoinfo.image;  // Set the sprite to the image component
@@ -32,10 +34,30 @@ public class InfoDialogueManager : MonoBehaviour
             Debug.LogWarning("Image is not assigned in InfoDialogue!");
         }
     }
-    
+
     public void EndInfoDialogue()
     {
         Debug.Log("End of conversation");
+    }
+    
+    public void OnSaveButtonClicked()
+    {
+        if (bookScript != null)
+        {
+            if (displayImage != null && displayImage.sprite != null)
+            {
+                bookScript.saveToBook(displayImage.sprite);
+                Debug.Log("Sprite saved to book from Info Panel!");
+            }
+            else
+            {
+                Debug.LogWarning("No sprite found in info panel displayImage to save.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Book script reference is missing in InfoDialogueManager!");
+        }
     }
 }
 

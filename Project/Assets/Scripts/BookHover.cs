@@ -7,6 +7,7 @@ public class HoverUI : MonoBehaviour
     public static bool GamePaused = false;
     public GameObject bookBtn;
     public GameObject book;
+    public GameObject xBook;
     //public MonoBehaviour mouseLookScript;
     public GameObject map;
 
@@ -61,11 +62,14 @@ public class HoverUI : MonoBehaviour
     public void bookOpen()
     {
         book.SetActive(true);
+        //xBook.SetActive(true);
     }
 
-    public void bookClose()
+    public void CloseBook()
     {
+        Debug.Log("Book Close Called");
         book.SetActive(false);
+        //xBook.SetActive(false);
     }
 
     public void mapOpen()
