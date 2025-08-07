@@ -156,8 +156,23 @@ public class Book : MonoBehaviour
 
         if (currentSaveIndex < pageImages.Count)
         {
-            pageImages[currentSaveIndex].sprite = imageToSave;
+            /*pageImages[currentSaveIndex].sprite = imageToSave;
             pageImages[currentSaveIndex].enabled = true;
+            currentSaveIndex++;*/
+            Image targetImage = pageImages[currentSaveIndex];
+            targetImage.sprite = imageToSave;
+            targetImage.enabled = true;
+
+            // Flip every second image (i.e., index 1, 3, 5...)
+            if (currentSaveIndex % 2 == 1)
+            {
+                targetImage.rectTransform.localScale = new Vector3(-1, 1, 1); // Flip horizontally
+            }
+            else
+            {
+                targetImage.rectTransform.localScale = Vector3.one; // Normal scale
+            }
+
             currentSaveIndex++;
         }
         else
