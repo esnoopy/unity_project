@@ -156,10 +156,10 @@ public class Book : MonoBehaviour
 
         if (currentSaveIndex < pageImages.Count)
         {
-            /*pageImages[currentSaveIndex].sprite = imageToSave;
+            pageImages[currentSaveIndex].sprite = imageToSave;
             pageImages[currentSaveIndex].enabled = true;
-            currentSaveIndex++;*/
-            Image targetImage = pageImages[currentSaveIndex];
+            currentSaveIndex++;
+            /*Image targetImage = pageImages[currentSaveIndex];
             targetImage.sprite = imageToSave;
             targetImage.enabled = true;
 
@@ -173,7 +173,7 @@ public class Book : MonoBehaviour
                 targetImage.rectTransform.localScale = Vector3.one; // Normal scale
             }
 
-            currentSaveIndex++;
+            currentSaveIndex++;*/
         }
         else
         {
