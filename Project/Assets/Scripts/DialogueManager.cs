@@ -6,34 +6,36 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public GameObject DialoguePanel;
     public TextMeshProUGUI nameText;
-    public TextMeshProUGUI dialogueText;
+    public Image dialogueImage;
 
-    private Queue<string> lines;
-    private string currentLine;
+    private Queue<Sprite> spriteQueue;
+    private Sprite currentSprite;
     public void Start(){
-        Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        lines = new Queue<string>();
+        spriteQueue = new Queue<Sprite>();
     }
 
-    public void StartDialogue(Dialogue dialogue){
+    public void StartDialogue(Dialogue dialogue)
+    {
 
         nameText.text = dialogue.name;
-        lines.Clear();
+        spriteQueue.Clear();
 
-        foreach(string line in dialogue.lines){
-            Debug.Log("Enqueue line: " + line);
-            lines.Enqueue(line);
+        foreach (Sprite sprite in dialogue.dialogueSprites)
+        {
+            spriteQueue.Enqueue(sprite);
         }
 
-        DisplayLine(lines.Dequeue());
+        //DisplayLine(lines.Dequeue());
+        DisplayNextSprite();
     }
 
-    private void DisplayLine(string line)  ///ADD ENTER CLICK
+    /*private void DisplayLine(string line)  ///ADD ENTER CLICK
     {
         currentLine = line;
         dialogueText.text = currentLine;
-    }
+    }*/
 
     /*public void DisplayNextLine(){
         if(lines.Count == 0){
@@ -47,7 +49,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = line;
     }*/
 
-    public void DisplayNextLine()
+    /*public void DisplayNextLine()
     {
         if (lines.Count == 0)
         {
@@ -56,8 +58,27 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayLine(lines.Dequeue());
+    }*/
+
+    public void DisplayNextSprite()
+    {
+        if (spriteQueue.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+
+        DisplaySprite(spriteQueue.Dequeue());
     }
-    public void EndDialogue(){
+
+    private void DisplaySprite(Sprite sprite)
+    {
+        currentSprite = sprite;
+        dialogueImage.sprite = currentSprite;
+    }
+    public void EndDialogue()
+    {
+        DialoguePanel.SetActive(false);
         Debug.Log("End of conversation");
     }
 }

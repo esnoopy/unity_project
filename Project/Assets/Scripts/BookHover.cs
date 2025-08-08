@@ -15,6 +15,8 @@ public class HoverUI : MonoBehaviour
 
     public GameObject shop;
 
+    public GameObject help;
+
     void Update()
     {
 
@@ -91,15 +93,25 @@ public class HoverUI : MonoBehaviour
     {
         inventory.SetActive(false);
     }
-    
+
     public void ShopOpen()
     {
-       shop.SetActive(true);
-    } 
-    
+        shop.SetActive(true);
+    }
+
     public void ShopClose()
     {
         shop.SetActive(false);
+    }
+
+    public void HelpOpen()
+    {
+       help.SetActive(true);
+    } 
+    
+    public void HelpClose()
+    {
+        help.SetActive(false);
     }
     
 }

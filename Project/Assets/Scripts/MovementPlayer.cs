@@ -64,11 +64,15 @@ public class MovementPlayer : MonoBehaviour
     bool isMoving = Mathf.Abs(moveInput) > 0.1f || Mathf.Abs(turnInput) > 0.1f;
 
     // Only apply horizontal rotation when moving
-    if (isMoving)
+    /*if (isMoving)
     {
         yRotation += mouseX;
         currentYaw = yRotation;
-    }
+    }*/
+
+    // Always apply horizontal rotation to player
+    yRotation += mouseX;
+    currentYaw = yRotation;
 
     // Apply rotation to player body
     transform.localRotation = Quaternion.Euler(0f, currentYaw, 0f);
