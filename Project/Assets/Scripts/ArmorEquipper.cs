@@ -1,64 +1,106 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArmorEquipper : MonoBehaviour
 {
-    public GameObject player;         // Drag your player GameObject here
-    public GameObject armorPrefab;    // Drag your armor prefab here
-    public GameObject swordPrefab;    // Drag your sword prefab here
-    public GameObject helmetPrefab;   // Drag your helmet prefab here
+    public GameObject player;
+    public GameObject armorPrefab;
+    public GameObject swordPrefab;
+    public GameObject helmetPrefab;
+    public Text equippingText; // Reference to a UI Text element
 
     private bool armorEquipped = false;
     private bool swordEquipped = false;
     private bool helmetEquipped = false;
+    private bool canEquip = false;
 
     private GameObject armorInstance;
     private GameObject swordInstance;
     private GameObject helmetInstance;
 
+    void Start()
+    {
+        // Hide the text at the beginning of the game
+        if (equippingText != null)
+        {
+            equippingText.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            canEquip = true;
+            Debug.Log("Player entered the equipping zone.");
+            // Show the text when the player enters the zone
+            if (equippingText != null)
+            {
+                equippingText.text = "Press J to Equip Helmet\nPress K to Equip Armor\nPress L to Equip Sword";
+                equippingText.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            canEquip = false;
+            Debug.Log("Player exited the equipping zone.");
+            // Hide the text when the player leaves the zone
+            if (equippingText != null)
+            {
+                equippingText.gameObject.SetActive(false);
+            }
+        }
+    }
+
     void Update()
     {
-        // Toggle helmet with "J"
-        if (Input.GetKeyDown(KeyCode.J))
+        // Only allow equipping if the player is in the correct zone
+        if (canEquip)
         {
-            if (helmetEquipped)
+            if (Input.GetKeyDown(KeyCode.J))
             {
-                UnequipHelmet();
-                helmetEquipped = false;
+                if (helmetEquipped)
+                {
+                    UnequipHelmet();
+                    helmetEquipped = false;
+                }
+                else
+                {
+                    EquipHelmet();
+                    helmetEquipped = true;
+                }
             }
-            else
-            {
-                EquipHelmet();
-                helmetEquipped = true;
-            }
-        }
 
-        // Toggle armor with "K"
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            if (armorEquipped)
+            if (Input.GetKeyDown(KeyCode.K))
             {
-                UnequipArmor();
-                armorEquipped = false;
+                if (armorEquipped)
+                {
+                    UnequipArmor();
+                    armorEquipped = false;
+                }
+                else
+                {
+                    EquipArmor();
+                    armorEquipped = true;
+                }
             }
-            else
-            {
-                EquipArmor();
-                armorEquipped = true;
-            }
-        }
 
-        // Toggle sword with "L"
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            if (swordEquipped)
+            if (Input.GetKeyDown(KeyCode.L))
             {
-                UnequipSword();
-                swordEquipped = false;
-            }
-            else
-            {
-                EquipSword();
-                swordEquipped = true;
+                if (swordEquipped)
+                {
+                    UnequipSword();
+                    swordEquipped = false;
+                }
+                else
+                {
+                    EquipSword();
+                    swordEquipped = true;
+                }
             }
         }
     }
