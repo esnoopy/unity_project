@@ -760,7 +760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14264,6 +14264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254766149}
   - component: {fileID: 254766148}
+  - component: {fileID: 254766150}
   m_Layer: 0
   m_Name: ArmorManager
   m_TagString: Untagged
@@ -14287,7 +14288,6 @@ MonoBehaviour:
   armorPrefab: {fileID: 100000, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
   swordPrefab: {fileID: 100092, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
   helmetPrefab: {fileID: 100060, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
-  equippingText: {fileID: 0}
 --- !u!4 &254766149
 Transform:
   m_ObjectHideFlags: 0
@@ -14303,6 +14303,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &254766150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254766147}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 39.765076, y: 19.308163, z: 29.160034}
+  m_Center: {x: 404.64584, y: 9.154089, z: 459.60602}
 --- !u!1 &257619605
 GameObject:
   m_ObjectHideFlags: 0
@@ -22665,28 +22686,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf5aa841ab867714fbd791609c57376c, type: 3}
---- !u!1 &424611894 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e01ced086e9ad5642afd1d1bdcdf0ee8, type: 3}
-  m_PrefabInstance: {fileID: 1738615641}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &424611895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424611894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c6754fa69954ff4ab627848c4a6f53e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 520629296}
-  armorPrefab: {fileID: 0}
-  swordPrefab: {fileID: 0}
-  helmetPrefab: {fileID: 0}
-  equippingText: {fileID: 0}
 --- !u!1001 &428704683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88626,10 +88625,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: -399050267022445988, guid: e01ced086e9ad5642afd1d1bdcdf0ee8, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e01ced086e9ad5642afd1d1bdcdf0ee8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 424611895}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e01ced086e9ad5642afd1d1bdcdf0ee8, type: 3}
 --- !u!1001 &1739662237
 PrefabInstance:

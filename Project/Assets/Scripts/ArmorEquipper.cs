@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ArmorEquipper : MonoBehaviour
 {
@@ -7,52 +6,35 @@ public class ArmorEquipper : MonoBehaviour
     public GameObject armorPrefab;
     public GameObject swordPrefab;
     public GameObject helmetPrefab;
-    public Text equippingText; // Reference to a UI Text element
 
     private bool armorEquipped = false;
     private bool swordEquipped = false;
     private bool helmetEquipped = false;
-    private bool canEquip = false;
+    private bool canEquip = false; // New variable to check if player can equip items
 
     private GameObject armorInstance;
     private GameObject swordInstance;
     private GameObject helmetInstance;
 
-    void Start()
-    {
-        // Hide the text at the beginning of the game
-        if (equippingText != null)
-        {
-            equippingText.gameObject.SetActive(false);
-        }
-    }
-
+    // This method is called when another collider enters the trigger
     private void OnTriggerEnter(Collider other)
     {
+        // Check if the entering collider is the player
         if (other.gameObject == player)
         {
             canEquip = true;
             Debug.Log("Player entered the equipping zone.");
-            // Show the text when the player enters the zone
-            if (equippingText != null)
-            {
-                equippingText.text = "Press J to Equip Helmet\nPress K to Equip Armor\nPress L to Equip Sword";
-                equippingText.gameObject.SetActive(true);
-            }
         }
     }
 
+    // This method is called when another collider exits the trigger
     private void OnTriggerExit(Collider other)
     {
+        // Check if the exiting collider is the player
         if (other.gameObject == player)
         {
             canEquip = false;
             Debug.Log("Player exited the equipping zone.");
-            // Hide the text when the player leaves the zone
-            if (equippingText != null)
-            {
-                equippingText.gameObject.SetActive(false);
-            }
         }
     }
 
@@ -61,6 +43,7 @@ public class ArmorEquipper : MonoBehaviour
         // Only allow equipping if the player is in the correct zone
         if (canEquip)
         {
+            // Toggle helmet with "J"
             if (Input.GetKeyDown(KeyCode.J))
             {
                 if (helmetEquipped)
@@ -75,6 +58,7 @@ public class ArmorEquipper : MonoBehaviour
                 }
             }
 
+            // Toggle armor with "K"
             if (Input.GetKeyDown(KeyCode.K))
             {
                 if (armorEquipped)
@@ -89,6 +73,7 @@ public class ArmorEquipper : MonoBehaviour
                 }
             }
 
+            // Toggle sword with "L"
             if (Input.GetKeyDown(KeyCode.L))
             {
                 if (swordEquipped)
