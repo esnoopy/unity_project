@@ -1,92 +1,137 @@
 using UnityEngine;
+using UnityEngine.UI; 
+using TMPro; // Add this line
 
 public class ArmorEquipper : MonoBehaviour
 {
+    // These references should be assigned in the Inspector
     public GameObject player;
     public GameObject armorPrefab;
     public GameObject swordPrefab;
     public GameObject helmetPrefab;
+    
+    // Changed the variable type to TextMeshProUGUI
+    public GameObject equippingButtonsUI; 
+    public TextMeshProUGUI promptText; 
 
     private bool armorEquipped = false;
     private bool swordEquipped = false;
     private bool helmetEquipped = false;
-    private bool canEquip = false; // New variable to check if player can equip items
+    private bool isPlayerInZone = false; 
 
     private GameObject armorInstance;
     private GameObject swordInstance;
     private GameObject helmetInstance;
-
-    // This method is called when another collider enters the trigger
-    private void OnTriggerEnter(Collider other)
+    
+    void Start()
     {
-        // Check if the entering collider is the player
-        if (other.gameObject == player)
+        if (promptText != null)
         {
-            canEquip = true;
-            Debug.Log("Player entered the equipping zone.");
+            promptText.gameObject.SetActive(false);
+        }
+        if (equippingButtonsUI != null)
+        {
+            equippingButtonsUI.SetActive(false);
         }
     }
 
-    // This method is called when another collider exits the trigger
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        // Check if the exiting collider is the player
         if (other.gameObject == player)
         {
-            canEquip = false;
+            isPlayerInZone = true;
+            Debug.Log("Player entered the equipping zone.");
+            
+            if (promptText != null)
+            {
+                promptText.text = "Press E to Try Armor";
+                promptText.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            isPlayerInZone = false;
             Debug.Log("Player exited the equipping zone.");
+            
+            if (promptText != null)
+            {
+                promptText.gameObject.SetActive(false);
+            }
+            if (equippingButtonsUI != null)
+            {
+                equippingButtonsUI.SetActive(false);
+            }
         }
     }
 
     void Update()
     {
-        // Only allow equipping if the player is in the correct zone
-        if (canEquip)
+        if (isPlayerInZone && Input.GetKeyDown(KeyCode.E))
         {
-            // Toggle helmet with "J"
-            if (Input.GetKeyDown(KeyCode.J))
+            if (equippingButtonsUI != null && !equippingButtonsUI.activeSelf)
             {
-                if (helmetEquipped)
-                {
-                    UnequipHelmet();
-                    helmetEquipped = false;
-                }
-                else
-                {
-                    EquipHelmet();
-                    helmetEquipped = true;
-                }
+                equippingButtonsUI.SetActive(true);
+                promptText.gameObject.SetActive(false);
             }
+        }
+    }
 
-            // Toggle armor with "K"
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                if (armorEquipped)
-                {
-                    UnequipArmor();
-                    armorEquipped = false;
-                }
-                else
-                {
-                    EquipArmor();
-                    armorEquipped = true;
-                }
-            }
+    public void CloseUI()
+    {
+        if (equippingButtonsUI != null)
+        {
+            equippingButtonsUI.SetActive(false);
+        }
 
-            // Toggle sword with "L"
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                if (swordEquipped)
-                {
-                    UnequipSword();
-                    swordEquipped = false;
-                }
-                else
-                {
-                    EquipSword();
-                    swordEquipped = true;
-                }
-            }
+        if (isPlayerInZone && promptText != null)
+        {
+            promptText.gameObject.SetActive(true);
+        }
+    }
+
+    void ToggleHelmet()
+    {
+        if (helmetEquipped)
+        {
+            UnequipHelmet();
+            helmetEquipped = false;
+        }
+        else
+        {
+            EquipHelmet();
+            helmetEquipped = true;
+        }
+    }
+
+    void ToggleArmor()
+    {
+        if (armorEquipped)
+        {
+            UnequipArmor();
+            armorEquipped = false;
+        }
+        else
+        {
+            EquipArmor();
+            armorEquipped = true;
+        }
+    }
+
+    void ToggleSword()
+    {
+        if (swordEquipped)
+        {
+            UnequipSword();
+            swordEquipped = false;
+        }
+        else
+        {
+            EquipSword();
+            swordEquipped = true;
         }
     }
 
