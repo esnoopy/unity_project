@@ -25,6 +25,7 @@ public class ArmorEquipper : MonoBehaviour
     
     void Start()
     {
+        // This is where the UI elements are hidden at the start of the game
         if (promptText != null)
         {
             promptText.gameObject.SetActive(false);
@@ -42,9 +43,10 @@ public class ArmorEquipper : MonoBehaviour
             isPlayerInZone = true;
             Debug.Log("Player entered the equipping zone.");
             
+            // This is where the prompt text is made visible.
+            // The text content is no longer being changed here.
             if (promptText != null)
             {
-                promptText.text = "Press E to Try Armor";
                 promptText.gameObject.SetActive(true);
             }
         }
@@ -57,6 +59,7 @@ public class ArmorEquipper : MonoBehaviour
             isPlayerInZone = false;
             Debug.Log("Player exited the equipping zone.");
             
+            // This is where all UI is hidden when the player leaves the zone
             if (promptText != null)
             {
                 promptText.gameObject.SetActive(false);
@@ -70,18 +73,41 @@ public class ArmorEquipper : MonoBehaviour
 
     void Update()
     {
+        // Adding Debug logs to help troubleshoot
+        if (isPlayerInZone)
+        {
+            Debug.Log("Update: isPlayerInZone is TRUE.");
+        }
+        else
+        {
+            Debug.Log("Update: isPlayerInZone is FALSE.");
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Update: 'E' key was pressed.");
+        }
+
         if (isPlayerInZone && Input.GetKeyDown(KeyCode.E))
         {
             if (equippingButtonsUI != null && !equippingButtonsUI.activeSelf)
             {
+                // This is where the buttons UI is shown and the prompt is hidden
                 equippingButtonsUI.SetActive(true);
                 promptText.gameObject.SetActive(false);
+                Debug.Log("Update: UI panel should now be active.");
+            }
+            else
+            {
+                // This debug message will help us find out why the UI isn't showing up
+                Debug.Log("Update: Failed to activate UI. Reasons could be: UI is already active, or UI reference is null.");
             }
         }
     }
 
     public void CloseUI()
     {
+        // This method is called by the UI button
         if (equippingButtonsUI != null)
         {
             equippingButtonsUI.SetActive(false);
