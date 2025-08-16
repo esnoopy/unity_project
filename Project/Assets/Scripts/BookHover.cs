@@ -63,6 +63,11 @@ public class HoverUI : MonoBehaviour
 
     public void bookOpen()
     {
+        help.SetActive(false);
+        shop.SetActive(false);
+        inventory.SetActive(false);
+        map.SetActive(false);
+
         book.SetActive(true);
         //xBook.SetActive(true);
     }
@@ -76,6 +81,11 @@ public class HoverUI : MonoBehaviour
 
     public void mapOpen()
     {
+        help.SetActive(false);
+        shop.SetActive(false);
+        inventory.SetActive(false);
+        book.SetActive(false);
+
         map.SetActive(true);
     }
 
@@ -86,6 +96,11 @@ public class HoverUI : MonoBehaviour
 
     public void InventoryOpen()
     {
+        help.SetActive(false);
+        shop.SetActive(false);
+        map.SetActive(false);
+        book.SetActive(false);
+
         inventory.SetActive(true);
     }
 
@@ -96,6 +111,11 @@ public class HoverUI : MonoBehaviour
 
     public void ShopOpen()
     {
+        help.SetActive(false);
+        map.SetActive(false);
+        inventory.SetActive(false);
+        book.SetActive(false);
+
         shop.SetActive(true);
     }
 
@@ -106,12 +126,17 @@ public class HoverUI : MonoBehaviour
 
     public void HelpOpen()
     {
-       help.SetActive(true);
-    } 
-    
+        map.SetActive(false);
+        shop.SetActive(false);
+        inventory.SetActive(false);
+        book.SetActive(false);
+
+        help.SetActive(true);
+    }
+
     public void HelpClose()
     {
         help.SetActive(false);
     }
-    
+
 }

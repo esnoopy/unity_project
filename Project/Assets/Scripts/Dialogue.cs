@@ -8,4 +8,5 @@ public class Dialogue : MonoBehaviour
     public string name;
 
     public Sprite[] dialogueSprites;
+    public AudioClip[] audioClips;
 }
