@@ -81,7 +81,7 @@ public class MovementPlayer : MonoBehaviour
 
     private void Movement(){
         GroundMovement();
-        Turn();
+        //Turn();
     }
 
     private void GroundMovement(){
