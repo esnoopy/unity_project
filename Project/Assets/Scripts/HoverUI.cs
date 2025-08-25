@@ -1,3 +1,5 @@
+// Book.cs
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +13,8 @@ public class HoverUI : MonoBehaviour
     //public MonoBehaviour mouseLookScript;
     public GameObject map;
 
-    public GameObject inventory;
+    // Change this to CanvasGroup
+    public CanvasGroup inventory;
 
     public GameObject shop;
 
@@ -65,7 +68,8 @@ public class HoverUI : MonoBehaviour
     {
         help.SetActive(false);
         shop.SetActive(false);
-        inventory.SetActive(false);
+        // Use ToggleInventoryUI(false)
+        ToggleInventoryUI(false);
         map.SetActive(false);
 
         book.SetActive(true);
@@ -83,7 +87,8 @@ public class HoverUI : MonoBehaviour
     {
         help.SetActive(false);
         shop.SetActive(false);
-        inventory.SetActive(false);
+        // Use ToggleInventoryUI(false)
+        ToggleInventoryUI(false);
         book.SetActive(false);
 
         map.SetActive(true);
@@ -101,19 +106,22 @@ public class HoverUI : MonoBehaviour
         map.SetActive(false);
         book.SetActive(false);
 
-        inventory.SetActive(true);
+        // Use the new CanvasGroup method
+        ToggleInventoryUI(true);
     }
 
     public void InventoryClose()
     {
-        inventory.SetActive(false);
+        // Use the new CanvasGroup method
+        ToggleInventoryUI(false);
     }
 
     public void ShopOpen()
     {
         help.SetActive(false);
         map.SetActive(false);
-        inventory.SetActive(false);
+        // Use ToggleInventoryUI(false)
+        ToggleInventoryUI(false);
         book.SetActive(false);
 
         shop.SetActive(true);
@@ -128,7 +136,8 @@ public class HoverUI : MonoBehaviour
     {
         map.SetActive(false);
         shop.SetActive(false);
-        inventory.SetActive(false);
+        // Use ToggleInventoryUI(false)
+        ToggleInventoryUI(false);
         book.SetActive(false);
 
         help.SetActive(true);
@@ -137,6 +146,17 @@ public class HoverUI : MonoBehaviour
     public void HelpClose()
     {
         help.SetActive(false);
+    }
+
+    // New: The helper method to toggle the Canvas Group
+    private void ToggleInventoryUI(bool show)
+    {
+        if (inventory != null)
+        {
+            inventory.alpha = show ? 1f : 0f;
+            inventory.blocksRaycasts = show;
+            inventory.interactable = show;
+        }
     }
 
 }

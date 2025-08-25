@@ -1,3 +1,5 @@
+// InventoryUI.cs
+
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -14,6 +16,9 @@ public class InventoryUI : MonoBehaviour
 
     public Button refundButton;
     private Item selectedItem = null;
+    
+    // New: Reference to the Canvas Group component
+    public CanvasGroup inventoryCanvasGroup;
 
     public void AddMoney(int amount)
     {
@@ -29,40 +34,53 @@ public class InventoryUI : MonoBehaviour
 
     void Start()
     {
-        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+        if (Inventory.instance == null)
+        {
+            Debug.LogError("Inventory instance not found. Make sure the Inventory script is in the scene.");
+            return;
+        }
 
+        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
         if (slots == null || slots.Length == 0)
         {
             InitializeInventorySlots(Inventory.instance.space);
         }
 
-        if (Inventory.instance != null)
-        {
-            Inventory.instance.onItemChangedCallback += UpdateInventoryUI;
-        }
+        Inventory.instance.onItemChangedCallback += UpdateInventoryUI;
         if (refundButton != null)
             refundButton.onClick.AddListener(RefundSelectedItem);
 
-        // Initialize player money
-        playerMoney = 100; // Set initial money to 100
-        UpdateMoneyText(); // Display initial money
-
-        Inventory.instance.onItemChangedCallback += UpdateInventoryUI;
+        playerMoney = 100;
+        UpdateMoneyText();
+    }
+    
+    // New: Public method to toggle the UI's visibility
+    public void ToggleInventoryUI(bool show)
+    {
+        if (inventoryCanvasGroup != null)
+        {
+            inventoryCanvasGroup.alpha = show ? 1f : 0f;
+            inventoryCanvasGroup.blocksRaycasts = show;
+            inventoryCanvasGroup.interactable = show; // This is the missing part
+        }
     }
 
     public void AddItemToInventoryUI(Sprite itemSprite, int itemMoney)
     {
-
-        // Check if player has enough money
         if (playerMoney < itemMoney)
         {
             Debug.Log("Not enough money to purchase this item!");
             return; 
         }
 
-        // Subtract money
-        AddMoney(-itemMoney); // Subtract the cost
+        AddMoney(-itemMoney);
         
+        if (slots == null)
+        {
+            Debug.LogError("Inventory slots are null. The UI was not properly initialized.");
+            return;
+        }
+
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].itemImage.sprite == null)
@@ -78,7 +96,11 @@ public class InventoryUI : MonoBehaviour
 
     void UpdateInventoryUI()
     {
-        Debug.Log("Updating Inventory UI.");
+        if (slots == null || slots.Length == 0)
+        {
+             Debug.LogWarning("InventoryUI slots not initialized.");
+             return;
+        }
 
         foreach (InventorySlot slot in slots)
         {
@@ -93,6 +115,7 @@ public class InventoryUI : MonoBehaviour
             }
         }
     }
+
     private void InitializeInventorySlots(int numberOfSlots)
     {
         slots = new InventorySlot[numberOfSlots];
@@ -100,17 +123,12 @@ public class InventoryUI : MonoBehaviour
         {
             GameObject slotGO = Instantiate(inventorySlotPrefab, itemsParent);
             slots[i] = slotGO.GetComponent<InventorySlot>();
-            if (slots[i] == null)
-            {
-                Debug.LogError("InventorySlot prefab does not have an InventorySlot component!");
-            }
         }
     }
     
     public void SelectItem(Item item)
     {
         selectedItem = item;
-        Debug.Log("Selected item: " + item.name);
     }
 
     public void RefundSelectedItem()
@@ -120,8 +138,7 @@ public class InventoryUI : MonoBehaviour
             Inventory.instance.Remove(selectedItem);
             AddMoney(selectedItem.moneyValue);
             selectedItem = null;
-            UpdateInventoryUI(); // Make sure the UI reflects the updated inventory
+            UpdateInventoryUI();
         }
     }
-
 }
