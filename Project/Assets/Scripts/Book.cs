@@ -152,33 +152,31 @@ public class Book : MonoBehaviour
         }
     }
 
-    public void saveToBook(Sprite imageToSave) {
+    public void saveToBook(Sprite imageToSave)
+    {
+    if (currentSaveIndex < pageImages.Count)
+    {
+        // Get the Image component for the current page
+        Image targetImage = pageImages[currentSaveIndex];
 
-        if (currentSaveIndex < pageImages.Count)
-        {
-            pageImages[currentSaveIndex].sprite = imageToSave;
-            pageImages[currentSaveIndex].enabled = true;
-            currentSaveIndex++;
-            /*Image targetImage = pageImages[currentSaveIndex];
-            targetImage.sprite = imageToSave;
-            targetImage.enabled = true;
+        // Assign the new sprite
+        targetImage.sprite = imageToSave;
 
-            // Flip every second image (i.e., index 1, 3, 5...)
-            if (currentSaveIndex % 2 == 1)
-            {
-                targetImage.rectTransform.localScale = new Vector3(-1, 1, 1); // Flip horizontally
-            }
-            else
-            {
-                targetImage.rectTransform.localScale = Vector3.one; // Normal scale
-            }
+        // Ensure the Image component is enabled
+        targetImage.enabled = true;
 
-            currentSaveIndex++;*/
-        }
-        else
-        {
-            Debug.LogWarning("No more empty pages to save dialogue.");
-        }
+        // Make the image fully opaque by setting the alpha channel to 1 (255)
+        Color imageColor = targetImage.color;
+        imageColor.a = 1f; // Setting alpha to 1 makes it fully visible
+        targetImage.color = imageColor;
+
+        // Increment the index to save to the next page next time
+        currentSaveIndex++;
+    }
+    else
+    {
+        Debug.LogWarning("No more empty pages to save dialogue.");
+    }
     }
     
 }
