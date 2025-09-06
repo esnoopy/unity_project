@@ -69,7 +69,7 @@ namespace APlayerFolder.FinalPlayerController
             bool isMovementInput = _playerLocomotionInput.MovementInput != Vector2.zero;             //order
             bool isMovingLaterally = IsMovingLaterally();                                            //matters
             bool isSprinting = _playerLocomotionInput.SprintToggledOn && isMovingLaterally;          //order
-            bool isWalking = isMovingLaterally && (!canRun || _playerLocomotionInput.WalkToggledOn); //matters
+            bool isWalking = (isMovingLaterally && !canRun) || _playerLocomotionInput.WalkToggledOn; //matters
             bool isGrounded = IsGrounded();
 
             /*PlayerMovementState lateralState = isWalking ? PlayerMovementState.Walking :
@@ -210,7 +210,7 @@ namespace APlayerFolder.FinalPlayerController
         #region State Checks
         private bool IsMovingLaterally()
         {
-            Vector3 lateralVelocity = new Vector3(_characterController.velocity.x, 0f, _characterController.velocity.y);
+            Vector3 lateralVelocity = new Vector3(_characterController.velocity.x, 0f, _characterController.velocity.z);
 
             return lateralVelocity.magnitude > movingThreshold;
         }
