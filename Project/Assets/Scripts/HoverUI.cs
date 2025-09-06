@@ -9,7 +9,6 @@ public class HoverUI : MonoBehaviour
     public static bool GamePaused = false;
     public GameObject bookBtn;
     public GameObject book;
-    public GameObject xBook;
     //public MonoBehaviour mouseLookScript;
     public GameObject map;
 
