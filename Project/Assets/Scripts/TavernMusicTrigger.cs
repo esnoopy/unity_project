@@ -1,4 +1,60 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.Splines;
+using Unity.Mathematics;
+
+// ============== INSTRUCTION ==============
+// Create empty game object and add "Cinemachine Path" component
+// Add waypoints and draw shape -> set to "Looped" to close shape
+// Create another empty game object and add this script
+// Select "Path" as well as "Player" in the inspector
+// Add sound to the object
+
+public class TavernMusicTrigger : MonoBehaviour
+{
+    [Tooltip("Spline Container to follow")]
+    public SplineContainer m_SplineContainer;
+    [Tooltip("Character to track")]
+    public GameObject Player;
+
+    // The position along the spline
+    private float m_Position;
+
+    void Update()
+    {   
+            // Find the closest point on the spline to the player's position
+        SplineUtility.Get=ClosestPoint(m_SplineContainer.Spline, Player.transform.position, out Vector3 closestPoint, out float t);
+
+            // Set the object's position and rotation based on the closest point
+        SetCartPosition(t);
+
+            // Define vectors for the dot product
+        Vector3 Sub = transform.position - Player.transform.position;
+        Vector3 Spline = transform.right;
+
+            // Attach object to player on enter
+        if(Vector3.Dot(Sub, Spline) > 0)
+        {
+            transform.position = Player.transform.position;
+            transform.rotation = Player.transform.rotation;
+        }   
+    }
+
+        // Set cart's position to closest point
+    void SetCartPosition(float t)
+    {
+            // Evaluate the position and tangent (direction) at the parameter t
+        Vector3 position = m_SplineContainer.Spline.EvaluatePosition(t);
+        Vector3 tangent = m_SplineContainer.Spline.EvaluateTangent(t);
+            
+        transform.position = position;
+        transform.rotation = Quaternion.LookRotation(tangent);
+    }
+}
+
+/*using UnityEngine;
 using System.Collections; // Required for Coroutines
 
 public class TavernMusicTrigger : MonoBehaviour
@@ -93,4 +149,4 @@ public class TavernMusicTrigger : MonoBehaviour
             audioSource.Stop();
         }
     }
-}
+}*/
