@@ -20289,10 +20289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd01667a7cd3784b8a7692407cbe6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSplineContainer: {fileID: 0}
-  playerTransform: {fileID: 0}
-  musicAudioSource: {fileID: 0}
-  fadeDistance: 10
+  tavernMusic: {fileID: 0}
+  fadeDuration: 2
   maxVolume: 1
 --- !u!1001 &362112776
 PrefabInstance:
@@ -26238,6 +26236,8 @@ GameObject:
   m_Component:
   - component: {fileID: 484598473}
   - component: {fileID: 484598474}
+  - component: {fileID: 484598476}
+  - component: {fileID: 484598475}
   m_Layer: 0
   m_Name: TavernSpline
   m_TagString: Untagged
@@ -26560,6 +26560,42 @@ MonoBehaviour:
       m_Data: []
   m_Knots:
     m_KnotsLink: []
+--- !u!114 &484598475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484598470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd01667a7cd3784b8a7692407cbe6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tavernMusic: {fileID: 1411247404}
+  fadeDuration: 3
+  maxVolume: 0.7
+--- !u!65 &484598476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484598470}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 45.5518, y: 31.998466, z: 36.92352}
+  m_Center: {x: -15.813196, y: -2.7903895, z: -17.96175}
 --- !u!1 &484770603
 GameObject:
   m_ObjectHideFlags: 0
@@ -90025,7 +90061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7130974115414917332, guid: b916b3820e6daf848a2bd4b3bcce0326, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 492
+      value: 464.9
       objectReference: {fileID: 0}
     - target: {fileID: 7130974115414917332, guid: b916b3820e6daf848a2bd4b3bcce0326, type: 3}
       propertyPath: m_LocalPosition.y
@@ -90033,7 +90069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7130974115414917332, guid: b916b3820e6daf848a2bd4b3bcce0326, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 401
+      value: 434.7
       objectReference: {fileID: 0}
     - target: {fileID: 7130974115414917332, guid: b916b3820e6daf848a2bd4b3bcce0326, type: 3}
       propertyPath: m_LocalRotation.w
