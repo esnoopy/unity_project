@@ -163,7 +163,7 @@ public class ArmorEquipper : MonoBehaviour
 
     void EquipArmor()
     {
-        Transform chest = player.transform.Find("peasant_2/Armature/Root/Pelvis/Spine_01/Spine_02");
+        Transform chest = player.transform.Find("Armature/Root_M/Spine1_M/Spine2_M/Chest_M");
 
         if (chest == null)
         {
@@ -173,9 +173,9 @@ public class ArmorEquipper : MonoBehaviour
 
         armorInstance = Instantiate(armorPrefab);
         armorInstance.transform.SetParent(chest);
-        armorInstance.transform.localPosition = new Vector3(0f, 0.043f, -0.029f);
-        armorInstance.transform.localRotation = Quaternion.Euler(0f, -180f, 0f);
-        armorInstance.transform.localScale = new Vector3(0.3f, 0.4f, 0.4f);
+        armorInstance.transform.localPosition = new Vector3(0.0252f, -0.0168f, 0.0112f);
+        armorInstance.transform.localRotation = Quaternion.Euler(-82.9f, 90f, 0f);
+        armorInstance.transform.localScale = new Vector3(0.4577152f, 0.4339085f, 0.5277648f);
     }
 
     void UnequipArmor()
@@ -189,7 +189,7 @@ public class ArmorEquipper : MonoBehaviour
 
     void EquipSword()
     {
-        Transform hand = player.transform.Find("peasant_2/Armature/Root/Pelvis/Spine_01/Spine_02/Spine_03/Clavicle_R/Upperarm_R/Lowerarm_R/Hand_R");
+        Transform hand = player.transform.Find("Armature/Root_M/Spine1_M/Spine2_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R");
 
         if (hand == null)
         {
@@ -199,9 +199,9 @@ public class ArmorEquipper : MonoBehaviour
 
         swordInstance = Instantiate(swordPrefab);
         swordInstance.transform.SetParent(hand);
-        swordInstance.transform.localPosition = new Vector3(0.01819365f, 0.08247816f, -0.01110588f);
-        swordInstance.transform.localRotation = Quaternion.Euler(234.587f, 137.655f, 14.591f);
-        swordInstance.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        swordInstance.transform.localPosition = new Vector3(-0.132f, 0.07f, -0.05f);
+        swordInstance.transform.localRotation = Quaternion.Euler(-1.585f, -10.167f, -174.308f);
+        swordInstance.transform.localScale = new Vector3(0.3f, 0.2f, 0.4f);
     }
 
     void UnequipSword()
@@ -215,7 +215,7 @@ public class ArmorEquipper : MonoBehaviour
 
     void EquipHelmet()
     {
-        Transform head = player.transform.Find("peasant_2/Armature/Root/Pelvis/Spine_01/Spine_02/Spine_03/Neck_01/Head");
+        Transform head = player.transform.Find("Armature/Root_M/Spine1_M/Spine2_M/Chest_M/Neck_M/Head_M");
 
         if (head == null)
         {
@@ -225,9 +225,9 @@ public class ArmorEquipper : MonoBehaviour
 
         helmetInstance = Instantiate(helmetPrefab);
         helmetInstance.transform.SetParent(head);
-        helmetInstance.transform.localPosition = new Vector3(0.005f, -0.04f, 0.03f);
-        helmetInstance.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
-        helmetInstance.transform.localScale = new Vector3(0.44f, 0.4f, 0.47f);
+        helmetInstance.transform.localPosition = new Vector3(0.123f, 0.055f, 0.023f);
+        helmetInstance.transform.localRotation = Quaternion.Euler(-86.13f, 180f, -94.6f);
+        helmetInstance.transform.localScale = new Vector3(0.5f, 0.6021414f, 0.57f);
     }
 
     void UnequipHelmet()
