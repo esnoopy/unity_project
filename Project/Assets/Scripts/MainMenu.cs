@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject mainMenuUI; 
+    [SerializeField] private GameObject mainMenuUI;
+    [SerializeField] private GameObject instructionsPanel;
+    [SerializeField] private GameObject optionsPanel;
     private void Start()
     {
         // Show menu at start
@@ -23,5 +25,30 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quitting game...");
         Application.Quit();
+    }
+
+    public void OpenInstructions()
+    {
+            instructionsPanel.SetActive(true); // Show instructions panel
+
+            mainMenuUI.SetActive(false); // Hide main menu
+    }
+
+    // Open Options panel
+    public void OpenOptions()
+    {
+            optionsPanel.SetActive(true); // Show options panel
+
+            mainMenuUI.SetActive(false); // Hide main menu
+    }
+
+    // Go back to Main Menu from Instructions or Options
+    public void BackToMainMenu()
+    {
+            mainMenuUI.SetActive(true); // Show main menu
+
+            instructionsPanel.SetActive(false); // Hide instructions panel
+        
+            optionsPanel.SetActive(false); // Hide options panel
     }
 }
