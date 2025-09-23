@@ -28,6 +28,10 @@ public class PausedMenuScript : MonoBehaviour
         pausedMenu.SetActive(false);
         Time.timeScale = 1f;
         GamePaused = false;
+
+        // Keep cursor visible and free (do not hide or lock it)
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void Pause()
@@ -35,6 +39,10 @@ public class PausedMenuScript : MonoBehaviour
         pausedMenu.SetActive(true);
         Time.timeScale = 0f;
         GamePaused = true;
+
+        // Ensure cursor is visible and free when paused
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void Quit()

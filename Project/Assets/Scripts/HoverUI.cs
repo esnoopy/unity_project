@@ -36,6 +36,10 @@ public class HoverUI : MonoBehaviour
                 Pause();
             }
         }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            mapOpen();
+        }
     }
 
     public void Resume()
