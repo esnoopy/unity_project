@@ -3518,9 +3518,9 @@ MonoBehaviour:
   _playerCamera: {fileID: 6107085789947003627}
   walkAcceleration: 25
   walkSpeed: 2
-  runAcceleration: 35
+  runAcceleration: 40
   runSpeed: 4
-  sprintAcceleration: 50
+  sprintAcceleration: 55
   sprintSpeed: 7
   drag: 20
   gravity: 25
@@ -5696,7 +5696,7 @@ Transform:
   m_GameObject: {fileID: 7922415635874314085}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000051418468, y: 0.00000024667108, z: -2.4970634e-10, w: 1}
-  m_LocalPosition: {x: -4.7631054, y: -0.06287184, z: 6.0699697}
+  m_LocalPosition: {x: 0.13989791, y: 0.15331897, z: -1.25104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
