@@ -41,7 +41,7 @@ public class ArmorEquipper : MonoBehaviour
         if (other.gameObject == player)
         {
             isPlayerInZone = true;
-            Debug.Log("Player entered the equipping zone.");
+            //Debug.Log("Player entered the equipping zone.");
             
             // This is where the prompt text is made visible.
             // The text content is no longer being changed here.
@@ -57,7 +57,7 @@ public class ArmorEquipper : MonoBehaviour
         if (other.gameObject == player)
         {
             isPlayerInZone = false;
-            Debug.Log("Player exited the equipping zone.");
+            //Debug.Log("Player exited the equipping zone.");
             
             // This is where all UI is hidden when the player leaves the zone
             if (promptText != null)
@@ -74,7 +74,7 @@ public class ArmorEquipper : MonoBehaviour
     void Update()
     {
         // Adding Debug logs to help troubleshoot
-        if (isPlayerInZone)
+        /*if (isPlayerInZone)
         {
             Debug.Log("Update: isPlayerInZone is TRUE.");
         }
@@ -86,7 +86,7 @@ public class ArmorEquipper : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Update: 'E' key was pressed.");
-        }
+        }*/
 
         if (isPlayerInZone && Input.GetKeyDown(KeyCode.E))
         {
@@ -95,13 +95,13 @@ public class ArmorEquipper : MonoBehaviour
                 // This is where the buttons UI is shown and the prompt is hidden
                 equippingButtonsUI.SetActive(true);
                 promptText.gameObject.SetActive(false);
-                Debug.Log("Update: UI panel should now be active.");
-            }
+                //Debug.Log("Update: UI panel should now be active.");
+            }/*
             else
             {
                 // This debug message will help us find out why the UI isn't showing up
                 Debug.Log("Update: Failed to activate UI. Reasons could be: UI is already active, or UI reference is null.");
-            }
+            }*/
         }
     }
 
@@ -167,7 +167,7 @@ public class ArmorEquipper : MonoBehaviour
 
         if (chest == null)
         {
-            Debug.LogError("Chest bone not found. Check the path!");
+            //Debug.LogError("Chest bone not found. Check the path!");
             return;
         }
 
@@ -193,7 +193,7 @@ public class ArmorEquipper : MonoBehaviour
 
         if (hand == null)
         {
-            Debug.LogError("Right hand bone not found. Update the path!");
+            //Debug.LogError("Right hand bone not found. Update the path!");
             return;
         }
 
@@ -219,7 +219,7 @@ public class ArmorEquipper : MonoBehaviour
 
         if (head == null)
         {
-            Debug.LogError("Head bone not found. Check the path!");
+            //Debug.LogError("Head bone not found. Check the path!");
             return;
         }
 
