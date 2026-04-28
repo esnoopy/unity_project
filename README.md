@@ -1,6 +1,6 @@
-# Virtual Mediavla Castle City Interactive Application
+# Virtual Medieval Castle City Interactive Application
 
-The topic of the work concerns the creation of an interactive application for a virtual mediavl castle city, with an emphasis on cultural exploration and 
+The topic of the work concerns the creation of an interactive application for a virtual medieval castle city, with an emphasis on cultural exploration and 
 educational interaction. Its user will be the "visitors" of the castle city, who can explore various points of interest, learn their history and participate 
 in interactive activities, while also having the possibility of purchasing souvenirs. The aim is to offer an experience that combines information, narration, 
 interaction and shopping, applying the principles of Human-Computer Interaction.
