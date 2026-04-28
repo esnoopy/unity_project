@@ -17,8 +17,8 @@ interaction and shopping, applying the principles of Human-Computer Interaction.
 The interface is designed to resemble a medieval castle environment, including stone walls, arches towers, gardens, torches, wooden doors, stairs and interactive map for navigation
 
 ## Documentation
-* User Manual (with screenshots)
-* Technical Documentation
+* User Manual (with screenshots)(User_Manual.pdf)
+* Technical Documentation(Τεχνικό Εγχειρίδιο.pdf)
 * Built-in online help system
 
 ## Tech Stack
